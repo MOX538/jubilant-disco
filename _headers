@@ -1,4 +1,4 @@
-# Cache control for static assets
+# Cache JavaScript, CSS, images for 1 year
 /*.js
   Cache-Control: public, max-age=31536000, immutable
 
@@ -11,14 +11,17 @@
 /*.jpg
   Cache-Control: public, max-age=31536000, immutable
 
-# Optional: slightly shorter cache for HTML
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache HTML pages for 10 minutes
 /index.html
   Cache-Control: public, max-age=600
 
 /game.html
   Cache-Control: public, max-age=600
 
-# Security headers (updated)
+# Modern Security Headers
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer
